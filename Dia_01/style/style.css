@@ -3,3 +3,63 @@
    margin: 0;
    padding: 0;
 }
+
+body {
+   background-color: hsl(0, 0%, 98%);
+}
+
+/* Comenzamos con el header */
+header {
+   display: flex;
+   justify-content: space-between ;
+   padding: 12px 24px;
+}
+
+nav {
+   display: flex;
+   gap: 50px;
+}
+
+ul {
+   display: flex;
+   list-style: none;
+   align-items: center;
+   gap: 30px;
+}
+
+.login{
+   display: flex;
+   align-items: center;
+   gap: 35px;
+}
+
+.login button{
+   border-radius: 12px;
+   height: 40px;
+   padding: 10px;
+   background-color:  hsl(0, 0%, 98%);
+   border-color: hsl(0, 0%, 8%);
+   border-width: 2px;
+}
+
+main{
+   display: flex;
+}
+
+.main-content{
+   width: 50%;
+}
+
+#img-content{
+   width: 50%;
+}
+
+.main-content section{
+   border: 1px solid red;
+   display: flex;
+   gap: 24px;
+}
+
+.main-content section img{
+   height: 100%;
+}
