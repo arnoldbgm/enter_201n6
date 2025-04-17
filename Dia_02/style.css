@@ -1,0 +1,73 @@
+/*Aqui creamos las variables*/
+/*Dentro del root*/
+:root{
+    --colorPrincipal:  hsl(217, 19%, 35%);
+    --colorComplementario: hsl(214, 17%, 51%);
+    --colorGriz: hsl(212, 23%, 69%);
+    --colorBlue: hsl(210, 46%, 95%);
+}
+
+.main-content{
+    height: 200px;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+    /* CASO DEL ROW*/
+    /* flex-direction: row;
+    gap: 25px; */
+    /*Maneja el horizonte*/
+    /* justify-content: center; */
+    /*Manjear el vertical*/
+    /* align-items: center;*/
+
+    
+    /* flex-direction: column; */
+    /* Trabaja como horizontal */
+    /* align-items: center; */
+    /* Trabajo con el eje vertical */
+    /* justify-content: center; */
+}
+
+.main-content > div{
+    border: 1px solid green;
+    background-color: var(--mainColor);
+}
+
+#item1{
+    flex-grow: 1;
+}
+
+#item2{
+    flex-grow: 0;
+}
+
+#item3{
+    flex-grow: 3;
+}
+
+#item4{
+    flex-grow: 2;
+}
+
+#item5{
+    flex-grow: 1;
+}
+
+/*Media query para toda las pantallas
+menores de 600px   => 0 => 600px*/
+/* max-width 800 => 0 a 800 */
+
+/* min-width 800 => 800 en adelante */
+
+@media(max-width:600px){
+    body{
+        background-color: blueviolet;
+    }
+}
+
+@media(min-width:601px){
+    body{
+        background-color: burlywood;
+    }
+}
