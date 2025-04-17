@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+    --lightGrayish: hsl(210, 46%, 95%)
+}
+
+@media (max-width: 700px) {
+  main {
+    border: 1px solid red;
+    width: 375px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--lightGrayish);
+  }
+  main > img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+
+  main > div {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .data > img {
+    width: 50px;
+    border-radius: 50%;
+  }
+}
