@@ -1,0 +1,28 @@
+.contenedor{
+   display: grid;
+   /*Para ursar grid area debemos de usar grid-template-area*/
+   grid-template-areas: 
+    "encabezado encabezado"
+    "menu       contenido"
+    "pie        pie";
+}
+
+.encabezado {
+   grid-area: encabezado;
+   background-color: #f73c3c;
+}
+
+.menu{
+   grid-area: menu;
+   background-color: #f7c03c;
+}
+
+.contenido{
+   grid-area: contenido;
+   background-color: #3cf7c0;
+}
+
+.pie{
+   grid-area: pie;
+   background-color: #3c3cf7;
+}

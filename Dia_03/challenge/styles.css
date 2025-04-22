@@ -1,0 +1,89 @@
+/*Normalizamos los estilos*/
+* {
+   padding: 0;
+   margin: 0;
+}
+
+body{
+   background-color: antiquewhite;
+}
+
+.container{
+   display: grid;
+   grid-template-columns: repeat(13, 1fr);
+   grid-template-rows: repeat(8, 1fr);
+   gap: 10px;
+}
+
+.caja{
+   border: 1px solid black;
+   border-radius: 8px;
+}
+
+.c1{
+   grid-column: span 2;
+   grid-row: span 2;
+}
+
+.c2{
+   grid-column: span 2;
+   grid-row: span 2;
+}
+
+.c3 {
+   grid-column: span 2;
+   grid-row: span 2;
+}
+
+.c4 {
+   grid-column: span 3;
+   grid-row: span 2;
+}
+
+.c5 {
+   grid-column: span 4;
+   grid-row: span 2;
+}
+
+.c6{
+   grid-column: span 4;
+   grid-row: span 3;
+}
+
+.c7 {
+   grid-column: span 5;
+   grid-row: span 5;
+}
+
+.c8 {
+   grid-column: span 2;
+   grid-row: span 3;
+}
+
+.c9{
+   grid-column: span 2;
+   grid-row: span 3;
+}
+
+.c10{
+   grid-column: span 2;
+   grid-row: span 2;
+}
+
+.c11{
+   grid-column: span 2;
+   grid-row: span 2;
+}
+
+.c12{
+   grid-column: span 4;
+   grid-row: span 3;
+}
+
+.c13{
+   grid-column: span 4;
+}
+
+.c14 {
+   grid-column: span 5;
+}
