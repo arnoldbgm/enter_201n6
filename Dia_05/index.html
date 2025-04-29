@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <script>
+
+      /*Creacion de variables*/
+      /*Los prefijos para crear variables son => var  let   const*/
+      // let nombre = "Jean"; // String
+      // let edad = 20; // Number
+      // let esEstudiante = true; // Boolean
+
+      // /*Mostar las variables en la terminal o consola*/
+      // console.log(nombre)
+
+      // console.log(`Hola ${nombre}`)
+      // /*Reto 01 => Hola mi nombre es Jean, mi edad es 20*/
+
+      // /*Mutabilidad*/
+      // /*Es el cambio del valor de una variable*/
+      // nombre = "Joel"
+      // console.log(`Hola soy ${nombre}`)
+
+      // /*const => valor fijo que no va a mutar*/
+      // const PI = 3.14;
+
+      /*Operadores Aritmeticos de JS*/
+      /* +  -  *  /   %  */
+      // let a = 10;
+      // let b = 3;
+      // let suma = a + b;
+      // let resta = a - b;
+      // let multiplicacion = a * b;
+      // let division = a / b;
+      // let residuo = a % b; 
+      // console.log(`El residuo de la division es ${residuo}`)
+      /* Los operadores de incremento y decremento nos sirven
+      para los bucles*/
+      //a++; // Incremento de 1 unidad
+      // a--; // Decremento de 1 unidad
+
+
+      /*RETO 02*/
+      /*
+         Tenemos una tienda de ropa y tenemos los siguientes precios:
+         Camiseta: 10.99
+         Pantalon: 20.99
+         Zapatos: 30.99
+         Calcular el total de la compra + IGV (18%)
+         Mostrar el resultado en la consola
+           La camiseta cuesta 10.99, el pantalon 20.99 y los zapatos 30.99
+           El IGV es  XXXXXX
+           El total de la compra es XXXXXX
+         🌟 TIP: Crear 3 variables para
+      */
+
+      /*Estructuras de control*/
+      /*Condicionales*/
+      /* if , else , if else */
+
+      // let edad = 16;
+
+      // if (edad > 0) {
+      //    if (edad >= 18) {
+      //       console.log("Adelante puedes pasar al bar")
+      //    } else {
+      //       console.log("Lo siento no puedes pasar al bar")
+      //    }
+      // } else{
+      //    console.log("La edad no es valida")
+      // }
+
+      /*
+         🌟 RETO 03
+         Tenemos una tienda de peliculas:
+          - La Pelicula que tenemos es de Duro de matar categoria 18 años
+         Validar que el usuario que ingresa es mayor de edad y su edad no es negativa
+
+         Consola se debe mostrar:
+           CUMPLE => Gracias Juan, por adquirir Duro de Matar
+           NO CUMPLE => Juan tu no puedes compra esta pelicula
+           EDAD NEGATIVA => Tu edad es incorrecta
+       */
+
+      // let nombre = prompt("Introduce tu nombre")
+      // let edad = Number(prompt("Introduce tu edad"))
+
+      // /*Especificar el tipo del dato colocamos  typeof <variable>*/
+      // if(edad > 0){
+      //    if(edad >=18){
+      //       console.log(`${nombre} puedes ver Duro de Matar`)
+      //    }else{
+      //       console.log(`${nombre} no puedes ver la pelicula`)
+      //    }
+      // }else{
+      //    console.log(`Tu edad es incorrecta`)
+      // }
+
+      /*Bucles*/
+      /*Los bucles es una ejuccion que va a ejcutarse cierta cantidad de veces*/
+      /*Iterar => repetición*/
+
+      // while
+
+      // let i = 0;
+
+      // While dentro del () colamos la condicion, una vez que esta deje de cumplirse
+      // el bucle se dentra
+      // while(i < 5 ){
+      //    // Es el codigo que se ejecutar
+      //    console.log(i)
+      //    i++
+      // }
+
+
+      // //for (inicializacion; condicion; incremento)
+      // for(let j=0; j<5; j++){
+      //    console.log(`El valor de j es ${j}`)
+      // }
+
+      /*
+         Crear una calculadora, esta tendra las siguientes opciones
+            1 => Sumar
+            2 => Restar
+            0 => Salir
+      */
+
+      let opt = Number(prompt("Escribe tu opcion 1 => Registrar 2 => Restar 0 => Salir"))
+
+      while (opt !== 0) {
+         if (opt == 1) {
+            alert("Vamos a sumar")
+         } else if (opt == 2) {
+            alert("Vamos a restar")
+         } else {
+            break;
+         }
+         opt = Number(prompt("Escribe tu opcion 1 => Sumar 2 => Restar 0 => Salir"))
+      }
+
+
+   </script>
+
+</body>
+
+</html>
