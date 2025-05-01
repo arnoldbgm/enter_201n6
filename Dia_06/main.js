@@ -55,12 +55,12 @@ console.log(ingresDuplicado)
 let ropaPrecio = [50, 100, 150, 200, 250, 300, 400, 500]
 
 let ropaActualizada = ropaPrecio.map((elemt) => {
-                                                   if(elemt > 150){
-                                                      return elemt - (elemt * 0.2)
-                                                   } else{
-                                                      return elemt
-                                                   }
-                                                })
+   if (elemt > 150) {
+      return elemt - (elemt * 0.2)
+   } else {
+      return elemt
+   }
+})
 
 console.log(`Precios actualizados: ${ropaActualizada}`)
 console.log(`Precios originales: ${ropaPrecio}`)
@@ -78,4 +78,89 @@ console.log(`Precios originales: ${ropaPrecio}`)
    El array debe verse de la siguiente manera:
    ["Menor", "Mayor", "Mayor", "Mayor", "Mayor", "Menor", "Menor"]
 
+*/
+
+/*💚 Filter => SIRVE
+     - Filtrar elementos de un array que cumplan una condicion especifica
+*/
+
+let edades = [15, 18, 20, 25, 30, 17, 16, 19, 22, 14]
+
+let edadesFiltradas = edades.filter((element) => element >= 18)
+
+console.log(edadesFiltradas)
+console.log(`El total de personas mayores de edad es: ${edadesFiltradas.length}`)
+
+/*
+  🦇 Ejercicio de filter
+  Biblioteca de libros
+  Filtre por el nombre de los libros, debo de filtrar los libros que tengan mas o igual 7 letras
+
+  let libros = ["Harry Potter", "It", "Narnia", "Cien años de soledad", "Crónica de una muerte anunciada"]
+
+*/
+
+let libros = ["Harry Potter", "It", "Narnia", "Cien años de soledad", "Crónica de una muerte anunciada"]
+
+let librosFiltrados = libros.filter((element) => element.length >= 7)
+
+console.log(librosFiltrados)
+
+
+/* 
+ 🍏 RETO 03
+   TIENDA DE ROPA - BLACK FRIDAY
+   - 15% de descuento en todas las prendas que cuesten mas de
+   150 dolares
+
+   let ropaPrecio = [50, 100, 150, 200, 250, 300, 400, 500]
+
+   TAREA:
+   - Crear un nuevo array con la lista de los precios actualizados
+   recuerda aplicar el descuento
+   - Filtren los nuevos precios y quiten los que sean menores de 200 dolares
+   TERMINAL:
+   - Muestren el arreglo filtrado
+   - Muestren el total de prendas filtradas
+*/
+
+
+/*
+ 💚 REDUCE => SIRVE
+  - Acumular valores de un array en un solo valor
+  - Sumar todos los elementos de un array
+  - No modifica el array original
+*/
+
+const precios = [100, 50, 200, 300, 400]
+
+/*
+   acc => acumulador, es el valor que se va acumular en cada iteracion
+   element => elemento actual del array
+*/
+
+const total = precios.reduce((acc, element) => acc + element , 0)
+
+console.log(`El total es ${total}`)
+
+
+/*
+   🍏 RETO 04
+   Estamos en un colegio y tenemos con las calificaciones de los alumnos
+   y queremos saber cuantos alumnos aprobaron el examen, cuanto es el promedio de
+   toda la clase, cuantos alumnos reprobaron y cuanto es el promedio de los reprobados
+
+   let califaciones = [15, 20, 10, 5, 18, 12, 8, 14, 16, 17, 16, 2, 3 ,8, 10, 5 , 2 , 8 ,9]
+
+   RECUERDA: La nota minima para aprobar es de 11
+
+   IMPORTANTE:
+   - Como el profesor no quiere que exista tantos reprobados a todos los alumnos que tengan
+   de 8 a 10 se les va a colocar 11 automáticamente
+
+   TAREA:
+   - Crear un nuevo array con las calificaciones de los alumnos aprobados
+   - Crear un nuevo array con las calificaciones de los alumnos reprobados
+   - Mostrar el promedio de todos los alumnos de la clase
+   - Mostrar el promedio de los alumnos reprobados
 */
