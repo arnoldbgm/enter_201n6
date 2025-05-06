@@ -15,15 +15,13 @@ class Auto {
    }
 }
 
-// Instanciar un objeto
-// Siempre iniciamos con la palabra new
-const auto01 = new Auto("rojo", "Ferrari", "F40", 3, 4, "automatico")
-const auto02 = new Auto("azul", "Volkwagen", "Vocho", 4, 4, "manula")
-const auto03 = new Auto("verde", "Chevrolet", "Camaro", 2, 4, "automatico")
-
-
-console.log(auto01.color)
-console.log(auto03.modelo)
+class AutoElectrico extends Auto {
+   constructor(color, marca, modelo, numeroAsientos, numeroNeumaticos, transmision, motorElectrico) {
+      // Llamar al constructor de la clase padre
+      super(color, marca, modelo, numeroAsientos, numeroNeumaticos, transmision);
+      this.bateria = bateria;
+   }
+}
 
 
 /*
@@ -61,6 +59,15 @@ class Alumno {
    saludar() {
       console.log(`Nombre: ${this.nombre} ${this.apellido}, de la carrera de ${this.carrera}, promedio ${this.promedio}`)
    }
+
+   // Puedes agregar metodos
+   estudiar(curso) {
+      console.log(`El alumno ${this.nombre} esta estudiando ${curso}`)
+   }
+
+   mostrarApodo(nombre) {
+      console.log(`El apodo de ${this.nombre} es ${nombre}`)
+   }
 }
 
 // Instanciar un objeto
@@ -69,4 +76,4 @@ const maria = new Alumno("Maria", "Lopez", 22, "Arquitectura", "Dibujo", 8.7)
 const pedro = new Alumno("Pedro", "Gomez", 21, "Medicina", "Musica", 9.0)
 
 // Invocar un metodo o llamar
-maria.saludar()
+pedro.mostrarApodo("El chino")

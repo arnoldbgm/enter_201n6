@@ -89,3 +89,21 @@ const auto03 = new Auto("verde", "Chevrolet", "Camaro", 2, 4, "automatico")
 console.log(auto01.color)
 console.log(auto03.modelo)
 ```
+
+### ¿Que se el this?
+
+El this viene a significar `este objeto`
+
+Se usa dentro de una clase para referirse a la propiedad que esta siendo usada dentro del constructor
+
+
+## 🏦 Pilares de la POO
+### Abstracción
+La abstracción consiste en obtener los detalles internos de como funciona algo y cuales son sus propiedades
+Por ejemplo: Si vieramos un libro => titulo, capitulos, autor, color, empastado, leer
+### Polimorfismo
+El polimorfismo es la capacidad de que una clase pueda comportarse de distintas formas.
+### Herencia
+Es la capacidad de poder heredar metodos y/o propiedades de una clase padre
+### Encapsulamiento
+Podemos crear metodos (funciones) publicos o privados
