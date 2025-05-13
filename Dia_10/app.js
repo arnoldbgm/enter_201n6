@@ -32,13 +32,10 @@ let txtResult = document.getElementById("resultado")
 
 const btnMultiplicar = document.getElementById("multiplicar")
 
-btnSumar.addEventListener("click", function () {
-   // Para hacer la suma y que se muestre en un alert
-   let val1 = Number(input1.value)
-   let val2 = Number(input2.value)
-   let total = val1 + val2
-   txtResult.innerText = total
-})
+let tbHistorial = document.getElementById("historial-body")
+
+let historial = []
+
 
 
 /*
@@ -59,20 +56,78 @@ btnSumar.addEventListener("click", function () {
 
 btnMultiplicar.addEventListener("click", function () {
    // Validacion de inputs vacios
-   if (input1.value === "" || input2.value === ""){
+   if (input1.value === "" || input2.value === "") {
       alert("Los inputs no pueden estar vacios")
       return;
    }
-   
+
    let val1 = Number(input1.value)
    let val2 = Number(input2.value)
    let total = val1 * val2;
    txtResult.innerText = total
    // Si el resultado es negativo rojo
    // Si es positivo verde
-   if (total < 0){
+   if (total < 0) {
       txtResult.style.color = "red";
-   } else{
+   } else {
       txtResult.style.color = "green";
    }
+})
+
+/*
+ Los arreglos van a ser muy utilies porque me van a
+ permitir guardar varios valores en una variable
+*/
+
+// En la parte superior cree un arreglo vacio
+// let historial = []
+
+// Cada operacion que haga se va a guardar en el
+// arrego historial, como un objeto
+
+/*
+
+let historial = [
+   { operacion: "suma", resultado: 5 },
+   { operacion: "resta", resultado: 2 },
+   { operacion: "multiplicacion", resultado: 10 },
+   { operacion: "division", resultado: 0.5 }
+]
+*/
+
+btnSumar.addEventListener("click", function () {
+   // Para hacer la suma y que se muestre en un alert
+   let val1 = Number(input1.value)
+   let val2 = Number(input2.value)
+   let total = val1 + val2
+   txtResult.innerText = total
+
+   // Vamos a guardar el resultado en el arreglo
+   // Pero antes debemos de convertirlo a un objeto
+   let objeto = {
+      operacion: "suma",
+      resultado: total
+   }
+   // Vamos insertar el objeto en el arreglo
+   historial.push(objeto);
+   console.log(historial);
+
+   // Vamos a rendizar el arreglo historial 
+   //< en nuestro HTML
+
+   // Para insertar el elmento en el HTML
+   // Vamos a usar el innerHTML
+   tbHistorial.innerHTML = `
+               <tr>
+                  <td class="px-3 py-2">1</td>
+                  <td class="px-3 py-2">suma</td>
+                  <td class="px-3 py-2">${total}</td>
+                  <td class="px-3 py-2">
+                     <button class="text-red-500 hover:text-red-700">
+                        Eliminar
+                     </button>
+                  </td>
+               </tr>
+   `
+
 })
