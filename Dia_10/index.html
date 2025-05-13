@@ -58,6 +58,7 @@
          </button>
 
          <button
+            id="multiplicar"
             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-all transform hover:scale-105 active:scale-95 shadow-md">
             <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -86,6 +87,36 @@
       <button
          class="w-full mt-6 bg-gray-500 hover:bg-gray-600 text-white font-medium py-3 rounded-lg transition-all transform hover:scale-105 active:scale-95">
          Limpiar
+      </button>
+   </div>
+
+   <!-- Sección de Historial -->
+   <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 w-full max-w-md mt-6">
+      <h2 class="text-xl md:text-2xl font-bold text-center text-gray-800 mb-4">
+         Historial de Operaciones
+      </h2>
+      
+      <!-- Contenedor de tabla con scroll -->
+      <div class="overflow-x-auto">
+         <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+               <tr>
+                  <th scope="col" class="px-3 py-3">N°</th>
+                  <th scope="col" class="px-3 py-3">Operación</th>
+                  <th scope="col" class="px-3 py-3">Resultado</th>
+                  <th scope="col" class="px-3 py-3">Acción</th>
+               </tr>
+            </thead>
+            <tbody id="historial-body">
+               <!-- El contenido del historial se agregará dinámicamente con JS -->
+            </tbody>
+         </table>
+      </div>
+      
+      <!-- Botón para limpiar todo el historial -->
+      <button id="limpiar-historial"
+         class="w-full mt-4 bg-red-500 hover:bg-red-600 text-white font-medium py-2 rounded-lg transition-all transform hover:scale-105 active:scale-95">
+         Limpiar Historial
       </button>
    </div>
 
