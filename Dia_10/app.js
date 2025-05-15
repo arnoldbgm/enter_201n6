@@ -117,17 +117,51 @@ btnSumar.addEventListener("click", function () {
 
    // Para insertar el elmento en el HTML
    // Vamos a usar el innerHTML
-   tbHistorial.innerHTML = `
+   // tbHistorial.innerHTML = `
+   //             <tr>
+   //                <td class="px-3 py-2">1</td>
+   //                <td class="px-3 py-2">suma</td>
+   //                <td class="px-3 py-2">${total}</td>
+   //                <td class="px-3 py-2">
+   //                   <button class="text-red-500 hover:text-red-700">
+   //                      Eliminar
+   //                   </button>
+   //                </td>
+   //             </tr>
+   // `
+
+   // Para mostrar el historial, nosotros debemos usar
+   // nuestro arreglo historial
+   // Lo vamos a usar con un forEach
+
+  dibujarHistorial();
+})
+
+// Vamos a crear una funcion para eliminar un registro especifico
+function elimnarRegistro(index) {
+   historial.splice(index, 1);
+   console.log("Este es el nuevo historial")
+   console.log(historial)
+   dibujarHistorial();
+}
+
+/* Teoria Callback */
+function dibujarHistorial() {
+   // 1. Limpiamos el HTML (voy a eliminar el contenido)
+   tbHistorial.innerHTML = ""
+   // 2. Recorrer el arreglo
+   historial.forEach((elmt, index) => {
+      tbHistorial.innerHTML += `
                <tr>
-                  <td class="px-3 py-2">1</td>
-                  <td class="px-3 py-2">suma</td>
-                  <td class="px-3 py-2">${total}</td>
+                  <td class="px-3 py-2">${index + 1}</td>
+                  <td class="px-3 py-2">${elmt.operacion}</td>
+                  <td class="px-3 py-2">${elmt.resultado}</td>
                   <td class="px-3 py-2">
-                     <button class="text-red-500 hover:text-red-700">
-                        Eliminar
-                     </button>
+                      <button onclick="elimnarRegistro(${index})" class="text-red-500 hover:text-red-700">
+                         Eliminar
+                      </button>
                   </td>
                </tr>
-   `
-
-})
+      `
+   })
+}
