@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Todo List - Interfaz Responsiva</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+   <div class="container mx-auto max-w-4xl px-4 py-8">
+      <!-- Header -->
+      <header class="text-center mb-10">
+         <h1 class="text-4xl font-bold text-gray-800 mb-2">Mi Lista de Tareas</h1>
+         <p class="text-gray-600">Organiza tus pendientes de manera eficiente</p>
+      </header>
+
+      <!-- Formulario para agregar tareas -->
+      <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+         <div class="flex flex-col sm:flex-row gap-4">
+            <input type="text" placeholder="Escribe una nueva tarea..."
+               class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+               id="todo-input">
+            <div class="flex gap-2">
+               <button type="button"
+                  class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 flex items-center gap-2 font-medium shadow-md hover:shadow-lg"
+                  id="add-todo-btn">
+                  <i class="fas fa-plus"></i>
+                  <span>Añadir Tarea</span>
+               </button>
+               <button type="button"
+                  class="px-4 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition duration-300 flex items-center gap-2 font-medium shadow-md hover:shadow-lg"
+                  id="edit-mode-btn">
+                  <i class="fas fa-edit"></i>
+                  <span class="hidden sm:inline">Editar</span>
+               </button>
+            </div>
+         </div>
+      </div>
+
+      <!-- Lista de tareas pendientes -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+         <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+            <i class="fas fa-clipboard-list text-blue-600"></i>
+            Tareas Pendientes
+         </h2>
+
+         <!-- Contenedor de tareas -->
+         <div id="todo-list" class="space-y-3">
+            <!-- Ejemplo de tarea (se puede eliminar cuando agregues la lógica JS) -->
+            <div
+               class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition duration-300">
+               <input type="checkbox" class="w-5 h-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+               <span class="flex-1 text-gray-700">Ejemplo de tarea pendiente</span>
+               <div class="flex gap-2">
+                  <button class="text-blue-500 hover:text-blue-700 transition duration-300" title="Editar tarea">
+                     <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  <button class="text-red-500 hover:text-red-700 transition duration-300" title="Eliminar tarea">
+                     <i class="fas fa-trash"></i>
+                  </button>
+               </div>
+            </div>
+
+            <!-- Otra tarea de ejemplo -->
+            <div
+               class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition duration-300">
+               <input type="checkbox" class="w-5 h-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+               <span class="flex-1 text-gray-700">Otra tarea de ejemplo</span>
+               <div class="flex gap-2">
+                  <button class="text-blue-500 hover:text-blue-700 transition duration-300" title="Editar tarea">
+                     <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  <button class="text-red-500 hover:text-red-700 transition duration-300" title="Eliminar tarea">
+                     <i class="fas fa-trash"></i>
+                  </button>
+               </div>
+            </div>
+         </div>
+
+         <!-- Mensaje cuando no hay tareas -->
+         <div id="empty-state" class="text-center py-12 hidden">
+            <i class="fas fa-clipboard-check text-6xl text-gray-300 mb-4"></i>
+            <p class="text-gray-500 text-lg">No hay tareas pendientes</p>
+            <p class="text-gray-400">¡Añade una nueva tarea para empezar!</p>
+         </div>
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="mt-8 bg-white rounded-lg shadow-lg p-6">
+         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="text-center p-4 bg-blue-50 rounded-lg">
+               <i class="fas fa-tasks text-3xl text-blue-600 mb-2"></i>
+               <h3 class="text-lg font-semibold text-gray-700">Total</h3>
+               <p class="text-2xl font-bold text-blue-600" id="total-count">2</p>
+            </div>
+            <div class="text-center p-4 bg-green-50 rounded-lg">
+               <i class="fas fa-check-circle text-3xl text-green-600 mb-2"></i>
+               <h3 class="text-lg font-semibold text-gray-700">Completadas</h3>
+               <p class="text-2xl font-bold text-green-600" id="completed-count">0</p>
+            </div>
+            <div class="text-center p-4 bg-yellow-50 rounded-lg">
+               <i class="fas fa-hourglass-half text-3xl text-yellow-600 mb-2"></i>
+               <h3 class="text-lg font-semibold text-gray-700">Pendientes</h3>
+               <p class="text-2xl font-bold text-yellow-600" id="pending-count">2</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script src="app.js"></script>
+</body>
+
+</html>
