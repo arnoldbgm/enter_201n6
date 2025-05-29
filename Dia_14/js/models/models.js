@@ -1,11 +1,10 @@
-// Creamos la clase 😁 🤑🫰
+// Creamos la clase Template
 
-class Gasto {
-   constructor(nombre, cantidad){
-      this.nombre = nombre;
-      this.cantidad = cantidad;
+class Template {
+   constructor(titulo, mensaje, hashtag) {
+      this.titulo = titulo;
+      this.mensaje = mensaje;
+      this.hashtag = hashtag;
    }
 }
 
-// 🔴 Importante, cuando usamos el AppState => no es necesario
-// Importar ni exportar ✖️
